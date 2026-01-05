@@ -7,24 +7,110 @@ color: #333
 style: |
   section {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    padding: 40px 60px;
   }
   h1 {
     color: #7c3aed;
+    margin-bottom: 0.5em;
   }
   h2 {
-    color: #333;
-  }
-  .violet {
-    color: #7c3aed;
+    color: #555;
+    font-weight: 400;
+    margin-top: 0;
   }
   section.lead {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+    color: white;
   }
   section.lead h1 {
-    font-size: 3rem;
+    color: white;
+    font-size: 4rem;
+    margin-bottom: 0.2em;
+  }
+  section.lead h2 {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.8rem;
+  }
+  section.invert {
+    background: #18181b;
+    color: #fff;
+  }
+  section.invert h1 {
+    color: #a78bfa;
+  }
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .stat-box {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f4f4f5;
+    border-radius: 12px;
+  }
+  .stat-box .number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #7c3aed;
+  }
+  .stat-box .label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .feature-box {
+    padding: 1.2rem;
+    background: #faf5ff;
+    border-left: 4px solid #7c3aed;
+    border-radius: 0 8px 8px 0;
+  }
+  .feature-box h3 {
+    margin: 0 0 0.5rem 0;
+    color: #7c3aed;
+    font-size: 1.1rem;
+  }
+  .feature-box p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  th {
+    background: #7c3aed;
+    color: white;
+    padding: 12px;
+    text-align: left;
+  }
+  td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  tr:nth-child(even) {
+    background: #fafafa;
+  }
+  .demo-placeholder {
+    background: #f4f4f5;
+    border: 2px dashed #ccc;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    color: #888;
   }
 ---
 
@@ -34,87 +120,125 @@ style: |
 
 ## Never Lose a Disc Again
 
-![width:200px](../public/images/logo.png)
-
 ---
 
 # The Problem
 
-## Disc golfers lose **millions of discs** every year
+## Disc golfers lose millions of discs every year
 
-- Average player loses 5-10 discs per year
-- Discs cost $15-25 each
-- Phone numbers written in Sharpie fade and smear
-- No standardized way to return found discs
-- Found discs often end up in "lost and found" boxes forever
+<div class="stat-grid">
+<div class="stat-box">
+<div class="number">5-10</div>
+<div class="label">Discs lost per player annually</div>
+</div>
+<div class="stat-box">
+<div class="number">$15-25</div>
+<div class="label">Cost per premium disc</div>
+</div>
+<div class="stat-box">
+<div class="number">~10%</div>
+<div class="label">Industry recovery rate</div>
+</div>
+</div>
+
+**Current solutions fail:** Sharpie fades, no standardized return process, found discs sit in lost & found boxes forever.
 
 ---
 
 # The Solution
 
-## Discr: Smart QR Stickers + Mobile App
+## Smart QR Stickers + Mobile App
 
-1. **Register your discs** with durable QR code stickers
-2. **Finder scans the code** - no app download required
-3. **Instant notification** to the owner
-4. **Coordinate return** through the app
-5. **Optional rewards** to incentivize returns
+<div class="feature-grid">
+<div class="feature-box">
+<h3>1. Register Your Discs</h3>
+<p>Apply durable QR code stickers that survive any course conditions</p>
+</div>
+<div class="feature-box">
+<h3>2. Finder Scans</h3>
+<p>Anyone can scan with their phone camera - no app download required</p>
+</div>
+<div class="feature-box">
+<h3>3. Instant Notification</h3>
+<p>Owner gets push notification the moment their disc is found</p>
+</div>
+<div class="feature-box">
+<h3>4. Coordinate Return</h3>
+<p>Built-in messaging and meetup scheduling to get your disc back</p>
+</div>
+</div>
 
 ---
 
 # How It Works
 
-<!-- Add GIF demo here -->
-<!-- ![bg right:50% width:300px](../public/images/scan-demo.gif) -->
+<!-- TODO: Add scan-to-recovery GIF demo -->
 
-1. Order QR stickers through the app
-2. Stick them on your discs
-3. If found, anyone can scan with their phone camera
-4. Owner gets push notification instantly
-5. Coordinate meetup or drop-off location
+<div class="demo-placeholder">
+
+**[GIF: Complete scan-to-recovery flow]**
+
+Finder scans QR → Owner notified → Meetup scheduled → Disc returned
+
+</div>
+
+**Key differentiator:** Finders don't need the app. The QR code opens a web page that handles everything.
 
 ---
+
+<!-- _class: invert -->
 
 # AI-Powered Features
 
 ## Beyond Simple QR Codes
 
-**AI Disc Identification**
-Snap a photo, instantly identify manufacturer, mold, and flight numbers
-
-**Visual Disc Recovery**
-No QR code? Photo the phone number - AI finds the owner
-
-**AI Shot Advisor**
-Photograph any hole, get personalized disc recommendations
+<div class="feature-grid">
+<div class="feature-box" style="background: #27272a; border-color: #a78bfa;">
+<h3 style="color: #a78bfa;">AI Disc Identification</h3>
+<p style="color: #a1a1aa;">Snap a photo of any disc and instantly identify the manufacturer, mold, and flight numbers</p>
+</div>
+<div class="feature-box" style="background: #27272a; border-color: #a78bfa;">
+<h3 style="color: #a78bfa;">Visual Disc Recovery</h3>
+<p style="color: #a1a1aa;">No QR code? Photo the phone number on the disc - AI extracts it and finds the owner</p>
+</div>
+<div class="feature-box" style="background: #27272a; border-color: #a78bfa;">
+<h3 style="color: #a78bfa;">AI Shot Advisor</h3>
+<p style="color: #a1a1aa;">Photograph any hole from the tee and get personalized disc and throw recommendations</p>
+</div>
+<div class="feature-box" style="background: #27272a; border-color: #a78bfa;">
+<h3 style="color: #a78bfa;">Smart Inventory</h3>
+<p style="color: #a1a1aa;">Track your entire collection with photos, flight numbers, and wear tracking</p>
+</div>
+</div>
 
 ---
 
 # Product Demo
 
-<!-- Replace with actual GIFs -->
+<div style="display: flex; gap: 1.5rem; justify-content: center; margin-top: 1rem;">
+<div style="text-align: center; flex: 1;">
+<div class="demo-placeholder" style="height: 300px;">
 
-<div style="display: flex; gap: 2rem; justify-content: center;">
-<div style="text-align: center;">
-
-**Scan & Report**
-<!-- ![width:200px](../public/images/scan-flow.gif) -->
-[GIF: Scanning QR code]
+**[GIF: QR Scan Flow]**
 
 </div>
-<div style="text-align: center;">
+<p style="margin-top: 0.5rem; font-weight: 500;">Scan & Report</p>
+</div>
+<div style="text-align: center; flex: 1;">
+<div class="demo-placeholder" style="height: 300px;">
 
-**Get Notified**
-<!-- ![width:200px](../public/images/notification.gif) -->
-[GIF: Push notification]
+**[GIF: AI Identification]**
 
 </div>
-<div style="text-align: center;">
+<p style="margin-top: 0.5rem; font-weight: 500;">AI Disc ID</p>
+</div>
+<div style="text-align: center; flex: 1;">
+<div class="demo-placeholder" style="height: 300px;">
 
-**Coordinate Return**
-<!-- ![width:200px](../public/images/meetup.gif) -->
-[GIF: Meetup flow]
+**[GIF: Recovery Flow]**
 
+</div>
+<p style="margin-top: 0.5rem; font-weight: 500;">Get It Back</p>
 </div>
 </div>
 
@@ -122,13 +246,27 @@ Photograph any hole, get personalized disc recommendations
 
 # Market Opportunity
 
-## Disc Golf is Exploding
+## Disc Golf is the Fastest Growing Sport in America
 
-- **50M+ rounds** played annually in the US
-- **40% growth** in participation since 2020
-- **15,000+ courses** worldwide
-- Average player owns **15-20 discs**
-- Passionate, engaged community
+<div class="stat-grid">
+<div class="stat-box">
+<div class="number">50M+</div>
+<div class="label">Rounds played annually (US)</div>
+</div>
+<div class="stat-box">
+<div class="number">40%</div>
+<div class="label">Participation growth since 2020</div>
+</div>
+<div class="stat-box">
+<div class="number">15,000+</div>
+<div class="label">Courses worldwide</div>
+</div>
+</div>
+
+- Average player owns **15-20 discs** and actively purchases more
+- Passionate, engaged community with strong social networks
+- Low barrier to entry driving continued growth
+- Underserved by technology solutions
 
 ---
 
@@ -136,12 +274,31 @@ Photograph any hole, get personalized disc recommendations
 
 ## Multiple Revenue Streams
 
-| Stream | Description |
-|--------|-------------|
-| **Sticker Sales** | $10-15 per sheet of QR stickers |
-| **Premium Subscription** | Advanced features, unlimited discs |
-| **Reward Facilitation** | Small fee on reward payments |
-| **B2B Partnerships** | Course lost & found integration |
+| Revenue Stream | Description | Status |
+|----------------|-------------|--------|
+| **Sticker Sales** | $10-15 per sheet of premium QR stickers | Active |
+| **Premium Subscription** | Advanced features, unlimited disc tracking | Planned |
+| **Reward Facilitation** | Small fee on optional reward payments | Active |
+| **B2B Partnerships** | Course lost & found integration, tournaments | Pipeline |
+
+**Unit economics:** High margin on stickers, recurring revenue from subscriptions, network effects drive growth.
+
+---
+
+# Competitive Landscape
+
+## Why Discr Wins
+
+| Feature | Discr | Sharpie | Other Apps |
+|---------|:-----:|:-------:|:----------:|
+| Durable identification | QR Sticker | Fades/Smears | Varies |
+| No app needed to report | **Yes** | N/A | No |
+| AI disc identification | **Yes** | No | No |
+| Visual phone recovery | **Yes** | No | No |
+| Built-in reward system | **Yes** | N/A | Limited |
+| Works on any disc | **Yes** | Yes | Some |
+
+**Moat:** AI capabilities, network effects, first-mover advantage in QR-based recovery.
 
 ---
 
@@ -149,25 +306,47 @@ Photograph any hole, get personalized disc recommendations
 
 ## Early Momentum
 
-- **X** discs registered
-- **X** successful recoveries
-- **X%** recovery rate (vs ~10% industry average)
-- **X** average rating on App Store
-- Featured in [publications/podcasts]
+<div class="stat-grid">
+<div class="stat-box">
+<div class="number">X</div>
+<div class="label">Discs Registered</div>
+</div>
+<div class="stat-box">
+<div class="number">X%</div>
+<div class="label">Recovery Rate</div>
+</div>
+<div class="stat-box">
+<div class="number">X</div>
+<div class="label">Monthly Active Users</div>
+</div>
+</div>
+
+**Milestones:**
+- iOS app launched and live on App Store
+- Android in development
+- Sticker fulfillment operational
+- AI features deployed and improving
 
 ---
 
-# Competitive Advantage
+# Go-to-Market Strategy
 
-## Why Discr Wins
+## Community-First Growth
 
-| Feature | Discr | Sharpie | Competitors |
-|---------|-------|---------|-------------|
-| Durable ID | QR Sticker | Fades | Varies |
-| No app needed to report | Yes | N/A | No |
-| AI identification | Yes | No | No |
-| Visual recovery | Yes | No | No |
-| Reward system | Built-in | N/A | Limited |
+1. **Grassroots Marketing**
+   - Partner with disc golf influencers and content creators
+   - Sponsor local leagues and tournaments
+   - Course pro shop partnerships
+
+2. **Viral Mechanics**
+   - Every found disc introduces a new potential user
+   - Social sharing of recovery stories
+   - Referral incentives
+
+3. **B2B Expansion**
+   - Course lost & found digitization
+   - Tournament integration
+   - Retail partnerships
 
 ---
 
@@ -175,31 +354,56 @@ Photograph any hole, get personalized disc recommendations
 
 ## Passionate Disc Golfers Building for Disc Golfers
 
-<!-- Add team photos and bios -->
+<!-- TODO: Add team photos -->
 
-**[Founder Name]** - CEO
-Background, experience, disc golf credentials
+<div style="display: flex; gap: 2rem; margin-top: 1.5rem;">
+<div style="flex: 1;">
 
-**[Co-founder Name]** - CTO
-Technical background, relevant experience
+### [Founder Name]
+**CEO / Co-founder**
+
+[Background, experience, disc golf credentials]
+
+</div>
+<div style="flex: 1;">
+
+### [Co-founder Name]
+**CTO / Co-founder**
+
+[Technical background, relevant experience]
+
+</div>
+</div>
 
 ---
 
 # The Ask
 
-## Seed Round: $X
+## Seed Round
 
-**Use of Funds:**
-- Product development (AI features)
-- Marketing & user acquisition
-- Sticker manufacturing scale-up
-- Team expansion
+<div style="display: flex; gap: 3rem; margin-top: 1.5rem;">
+<div style="flex: 1;">
 
-**Milestones:**
-- X registered discs
-- X monthly active users
-- Launch premium tier
-- B2B course partnerships
+### Use of Funds
+
+- **Product Development** - AI features, Android app
+- **Marketing** - User acquisition, influencer partnerships
+- **Operations** - Sticker manufacturing scale-up
+- **Team** - Key engineering and growth hires
+
+</div>
+<div style="flex: 1;">
+
+### Key Milestones
+
+- **X** registered discs
+- **X** monthly active users
+- Launch premium subscription tier
+- **X** B2B course partnerships
+- Android app launch
+
+</div>
+</div>
 
 ---
 
