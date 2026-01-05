@@ -1,0 +1,30 @@
+---
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: check-merge-conflict
+      - id: check-shebang-scripts-are-executable
+      - id: check-symlinks
+      - id: check-toml
+      - id: check-xml
+      - id: check-yaml
+      - id: detect-private-key
+      - id: double-quote-string-fixer
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.43.0
+    hooks:
+      - id: markdownlint
+        name: Markdownlint Docker
+        args:
+          - --disable
+          - MD013  # Line length - Marp slides can be wide
+          - MD033  # Inline HTML - needed for Marp styling
+          - MD041  # First line heading - front matter comes first
+          - --

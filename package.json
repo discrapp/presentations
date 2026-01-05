@@ -1,0 +1,20 @@
+{
+  "name": "@discr/presentations",
+  "version": "1.0.0",
+  "description": "Investor pitch decks and product demos for Discr",
+  "private": true,
+  "scripts": {
+    "dev": "marp --watch --server decks/",
+    "prebuild": "mkdir -p dist",
+    "build": "marp --html -I decks/ -o dist/",
+    "prebuild:pdf": "mkdir -p dist",
+    "build:pdf": "marp --pdf -I decks/ -o dist/",
+    "preview": "npx serve dist"
+  },
+  "keywords": ["discr", "presentations", "pitch-deck"],
+  "author": "Discr",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.2.3"
+  }
+}
