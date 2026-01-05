@@ -322,6 +322,7 @@ Finder scans QR → Owner notified → Meetup scheduled → Disc returned
 </div>
 
 **Milestones:**
+
 - iOS app launched and live on App Store
 - Android in development
 - Sticker fulfillment operational
@@ -360,7 +361,8 @@ Finder scans QR → Owner notified → Meetup scheduled → Disc returned
 <div style="flex: 1;">
 
 ### [Founder Name]
-**CEO / Co-founder**
+
+CEO / Co-founder
 
 [Background, experience, disc golf credentials]
 
@@ -368,7 +370,8 @@ Finder scans QR → Owner notified → Meetup scheduled → Disc returned
 <div style="flex: 1;">
 
 ### [Co-founder Name]
-**CTO / Co-founder**
+
+CTO / Co-founder
 
 [Technical background, relevant experience]
 
@@ -413,6 +416,5 @@ Finder scans QR → Owner notified → Meetup scheduled → Disc returned
 
 ## Questions?
 
-**hello@discrapp.com**
-**discrapp.com**
-
+**<hello@discrapp.com>**
+**<https://discrapp.com>**

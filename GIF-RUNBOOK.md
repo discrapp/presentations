@@ -188,8 +188,8 @@ ffmpeg -i recording.mov -ss 2 -t 8 \
 ![width:300px](../public/images/qr-scan-flow.gif)
 ```
 
-3. Preview with `npm run dev`
-4. Commit and push
+1. Preview with `npm run dev`
+1. Commit and push
 
 ---
 

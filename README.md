@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:8080 to view presentations.
+Open <http://localhost:8080> to view presentations.
 
 ## Commands
 
